@@ -7,6 +7,6 @@ https://duckdb.org/2021/10/29/duckdb-wasm#efficient-analytics-in-the-browser
 
 https://ace.c9.io/#nav=embedding
 - how was lib/js/ace-editor vendored?
-https://github.com/ajaxorg/ace-builds > Releases > v1.4.11 > download "Source code (zip)" > copy and paste src-min folder
+https://github.com/ajaxorg/ace-builds > Releases > v1.5.0 > download "Source code (zip)" > copy and paste src-noconflict folder
 - alternative?
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.43.5/src-min-noconflict/ace.min.js"></script>
