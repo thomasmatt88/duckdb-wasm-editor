@@ -135,6 +135,9 @@ async function runQuery() {
   let query = codeEditor.getValue();
 //   let query = "SELECT count(*) FROM 'https://blobs.duckdb.org/data/tpch-sf0.01-parquet/lineitem.parquet';"
 //   let query = "SELECT 'hello world';"
+//   let query = "CREATE TABLE my_table (id INTEGER, name VARCHAR);"
+//   let query = "INSERT INTO my_table VALUES (1, 'foo'), (2, 'bar');"
+//   let query = "SELECT * FROM my_table;"
 
   const resultTable = document.getElementById("resultTable");
   const resultTableDiv = document.getElementById("resultTableDiv");
@@ -148,8 +151,11 @@ async function runQuery() {
 
     const conn = await db.connect();
     console.log("Database connection established");
+
+    // only one query at a time -> https://github.com/duckdb/duckdb-wasm/discussions/1963
     const result = await conn.query(query);
     arrowToHtmlTable(result, "resultTable");
+
     resultTableDiv.style.display = "block";
     resultTable.style.display = "block";
     resultErrorDiv.style.display = "none";
