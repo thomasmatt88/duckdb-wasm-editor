@@ -89,39 +89,6 @@ async function uploadTable() {
   }
 }
 
-async function updateTableList() {
-  console.log("now running updateTableList");
-  try {
-    if (!db) {
-      console.error("DuckDB-Wasm is not initialized");
-      return;
-    }
-
-    const conn = await db.connect();
-    console.log("Database connection established");
-    const query = `SELECT table_name as TABLES FROM information_schema.tables WHERE table_schema = 'main';;`;
-    const showTables = await conn.query(query);
-
-    const rowCount = showTables.numRows;
-    const tablesDiv = document.getElementById("tablesDiv");
-    const queryEntryDiv = document.getElementById("queryEntryDiv");
-    console.log("rowCount: ", rowCount);
-
-    if (rowCount === 0) {
-      tablesDiv.style.display = "none";
-      queryEntryDiv.style.display = "none";
-    } else {
-      tablesDiv.style.display = "block";
-      queryEntryDiv.style.display = "block";
-      arrowToHtmlTable(showTables, "tablesTable");
-      await conn.close();
-      console.log("Database connection closed");
-    }
-  } catch (error) {
-    console.error("Error processing file or querying data:", error);
-  }
-}
-
 function arrowToHtmlTable(arrowTable, htmlTableId) {
   // Log the arrowTable to see if it's valid
   console.log("arrowTable:", arrowTable);
@@ -183,7 +150,6 @@ async function runQuery() {
     console.log("Database connection established");
     const result = await conn.query(query);
     arrowToHtmlTable(result, "resultTable");
-    updateTableList();
     resultTableDiv.style.display = "block";
     resultTable.style.display = "block";
     resultErrorDiv.style.display = "none";
