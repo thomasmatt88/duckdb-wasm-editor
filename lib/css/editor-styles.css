@@ -13,7 +13,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -93,11 +94,6 @@ html, body {
     list-style: none;
 }
 
-.editor__console-logs li pre {
-    font-size: .9em;
-    font-family: Inconsolata, sans-serif;
-}
-
 .ace_gutter {
     border-left: 5px solid var(--editor-border);
 }
@@ -106,34 +102,6 @@ html, body {
     color: #000;
 }
 
-.log--string {
-    color: #48BF0A;
-}
-
-.log--number {
-    color: #48BF0A;
-}
-
-.log--boolean {
-    color: blue;
-}
-
-.log--undefined {
-    color: grey;
-}
-
 .log--error {
     color: red;
-}
-
-.log--object {
-    color: darkcyan;
-}
-
-.log--array {
-    color: darkblue;
-}
-
-.log--function {
-    color: yellow;
 }
