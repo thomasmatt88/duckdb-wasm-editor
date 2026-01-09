@@ -164,22 +164,13 @@ function arrowToHtmlTable(arrowTable, htmlTableId) {
 }
 
 async function runQuery() {
-//   const queryInput = document.getElementById("queryInput");
-//   const queryInput = document.getElementById("editorCode");
   console.log(document);
   let query = codeEditor.getValue();
-//   let query = queryInput.value;
 //   let query = "SELECT count(*) FROM 'https://blobs.duckdb.org/data/tpch-sf0.01-parquet/lineitem.parquet';"
 //   let query = "SELECT 'hello world';"
-  const queryResultsDiv = document.getElementById("queryResultsDiv");
-
-  // Make sure the results div is visible before populating it
-  queryResultsDiv.style.display = "block";
-
-  const lastQueryDiv = document.getElementById("lastQueryDiv");
-  lastQueryDiv.innerHTML = query;
 
   const resultTable = document.getElementById("resultTable");
+  const resultTableDiv = document.getElementById("resultTableDiv");
   const resultErrorDiv = document.getElementById("resultErrorDiv");
 
   try {
@@ -193,7 +184,7 @@ async function runQuery() {
     const result = await conn.query(query);
     arrowToHtmlTable(result, "resultTable");
     updateTableList();
-    queryResultsDiv.style.display = "block";
+    resultTableDiv.style.display = "block";
     resultTable.style.display = "block";
     resultErrorDiv.style.display = "none";
     resultErrorDiv.innerHTML = "";
@@ -202,6 +193,7 @@ async function runQuery() {
     console.log("Database connection closed");
   } catch (error) {
     resultTable.style.display = "none";
+    resultTableDiv.style.display = "none";
     resultTable.innerHTML = "";
     resultErrorDiv.style.display = "block";
     resultErrorDiv.innerHTML = error;

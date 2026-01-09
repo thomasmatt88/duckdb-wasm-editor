@@ -17,21 +17,15 @@
             </div>
             <div class="editor__footer">
                 <div class="editor__footer--left">
-                    <button class="editor__btn editor__run">Run ></button>
-                    <button type="button" id="queryBtn" onclick="runQuery()">Run Query</button>
-                    <button class="editor__btn editor__reset">Reset ></button>
+                    <button class="editor__btn editor__run" type="button" id="queryBtn" onclick="runQuery()">Run
+                        ></button>
                 </div>
-                <div class="editor__footer--right">
-                    <div class="editor__console">
-                        <ul class="editor__console-logs"></ul>
+                <div id="queryResultsDiv" class="editor__footer--right">
+                    <div id="resultErrorDiv" style="display:none" class="editor__console">
                     </div>
-                </div>
-                <div id="queryResultsDiv">
-                    <h4>Query:</h4>
-                    <div id="lastQueryDiv"></div>
-                    <h4>Result:</h4>
-                    <div id="resultErrorDiv"></div>
-                    <table id="resultTable"></table>
+                    <div id="resultTableDiv" class="editor__console">
+                        <table id="resultTable"></table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +37,6 @@
 
     <!-- Custom Scripts -->
     <script src="lib/js/editor.js"></script>
-    <!-- <script src="lib/js/editor-console.js"></script> -->
 </body>
 
 </html>
