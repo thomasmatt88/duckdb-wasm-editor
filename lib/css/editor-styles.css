@@ -49,12 +49,13 @@ body {
 
 .editor__btn {
     background-color: #D3D3D3;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 3px;
     width: 100px;
     cursor: pointer;
     align-self: center;
     margin-bottom: 0.9em;     
+    font-weight: bold;
 }
 
 .editor__btn:hover {
