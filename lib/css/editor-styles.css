@@ -32,7 +32,7 @@ body {
     width: 50%;
     height: 70%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     background: var(--editor-bg);
     padding: 2em;
     border-radius: 3px;
@@ -47,23 +47,9 @@ body {
     display: flex;
 }
 
-.editor__footer--left {
-    display: flex;
-    flex-direction: column;
-}
-
-.editor__footer--right {
-    flex: 1;
-    margin-left: 10px;
-    overflow: hidden;
-}
-
 .editor__btn {
-    border: 0;
-    padding: .5em;
     background-color: #fff;
     border: 2px solid #333;
-    margin-top: 1em;
     width: 100px;
     cursor: pointer;
 }

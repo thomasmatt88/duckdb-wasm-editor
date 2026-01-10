@@ -12,21 +12,16 @@
 <body>
     <div class="editor">
         <div class="editor__wrapper">
+            <button class="editor__btn" type="button" id="queryBtn" onclick="runQuery()">Run</button>
             <div class="editor__body">
                 <div id="editorCode" class="editor__code"></div>
             </div>
             <div class="editor__footer">
-                <div class="editor__footer--left">
-                    <button class="editor__btn editor__run" type="button" id="queryBtn" onclick="runQuery()">Run
-                        ></button>
-                </div>
-                <div id="queryResultsDiv" class="editor__footer--right log--error">
-                    <div id="resultErrorDiv" style="display:none" class="editor__console">
+                    <div id="resultErrorDiv" style="display:none" class="editor__console log--error">
                     </div>
                     <div id="resultTableDiv" class="editor__console log--default">
                         <table class="editor__console-logs" id="resultTable"></table>
                     </div>
-                </div>
             </div>
         </div>
     </div>
