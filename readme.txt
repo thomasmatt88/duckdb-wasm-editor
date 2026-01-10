@@ -19,3 +19,8 @@ ace.config.setModuleUrl("ace/mode/custom_duckdb_sql", "/lib/js/mode-custom_duckd
 to top of editor.js so that ace framework would know where to find mode-custom_duckdb_sql.js 
 - codeEditor.session.setMode("ace/mode/custom_duckdb_sql");
 - replace all 'ace/mode/sql' with 'ace/mode/custom_duckdb_sql' inside of mode-custom_duckdb_sql.js
+
+
+To Do:
+- create new repo and add to github
+- iframe the editor into a blog

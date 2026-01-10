@@ -105,3 +105,12 @@ body {
 .log--error {
     color: red;
 }
+
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#resultTable th, #resultTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
