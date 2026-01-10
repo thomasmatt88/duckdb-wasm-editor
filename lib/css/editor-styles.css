@@ -53,6 +53,7 @@ body {
     width: 100px;
     cursor: pointer;
     align-self: center;
+    margin-bottom: 0.9em;     
 }
 
 .editor__console {
