@@ -22,5 +22,4 @@ to top of editor.js so that ace framework would know where to find mode-custom_d
 
 
 To Do:
-- create new repo and add to github
 - iframe the editor into a blog
