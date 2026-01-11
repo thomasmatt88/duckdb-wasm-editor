@@ -27,7 +27,3 @@ deploy via github pages
 - find at https://matthewthomas.info/duckdb-wasm-editor/
 $git tag -a v1.0.0 -m 'Version 1.0.0'
 $git push origin --tags
-
-To Do:
-- prevent first line from being highlighted
-- iframe the editor into a blog
