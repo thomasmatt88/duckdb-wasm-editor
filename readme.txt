@@ -25,6 +25,8 @@ deploy via github pages
 - make github repo public
 - Settings -> Pages -> "GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository."
 - find at https://matthewthomas.info/duckdb-wasm-editor/
+$git tag -a v1.0.0 -m 'Version 1.0.0'
+$git push origin --tags
 
 To Do:
 - prevent first line from being highlighted
