@@ -21,5 +21,11 @@ to top of editor.js so that ace framework would know where to find mode-custom_d
 - replace all 'ace/mode/sql' with 'ace/mode/custom_duckdb_sql' inside of mode-custom_duckdb_sql.js
 
 
+deploy via github pages
+- make github repo public
+- Settings -> Pages -> "GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository."
+- find at https://matthewthomas.info/duckdb-wasm-editor/
+
 To Do:
+- prevent first line from being highlighted
 - iframe the editor into a blog
